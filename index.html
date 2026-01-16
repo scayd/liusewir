@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benimle Barışır Mısın?</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ffb7c5",
+              secondary: "#e2b0ff",
+              darkText: "#594a4e",
+              btnSuccess: "#ff6b81",
+            },
+            fontFamily: {
+              script: ['"Dancing Script"', "cursive"],
+              sans: ['"Outfit"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="h-screen w-screen bg-gradient-to-tr from-[#ffecd2] to-[#fcb69f] overflow-hidden flex flex-col justify-center items-center relative font-sans"
+  >
+    <div class="absolute top-0 left-0 w-full h-full -z-10 overflow-hidden">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+    </div>
+
+    <div
+      id="main-container"
+      class="glass-card flex flex-col items-center gap-6 p-12 rounded-3xl max-w-[90%] w-[500px] text-center transition-all duration-300 ease-out fade-in"
+    >
+      <div class="image-section mb-2">
+        <img
+          src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3h4b3NjYzEzZjA2d3zrOHNzbmF5aDxzJmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/KztT2c4u8mYYUiMKdJ/giphy.gif"
+          alt="Cute Bear"
+          class="w-40 h-auto rounded-xl"
+        />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <h1
+          id="question"
+          class="font-script text-5xl text-darkText drop-shadow-sm"
+        >
+          Benimle barışır mısın liusewirrr?
+        </h1>
+        <p class="text-darkText/80 text-lg">Seni çok özledimmm</p>
+      </div>
+
+      <div
+        class="flex flex-wrap gap-6 justify-center items-center min-h-[60px] w-full"
+      >
+        <button
+          id="yes-btn"
+          class="bg-btnSuccess text-white px-8 py-3 rounded-full font-semibold text-base shadow-md hover:scale-105 hover:shadow-lg transition-transform duration-300"
+        >
+          Evet
+        </button>
+        <button
+          id="no-btn"
+          class="bg-white text-darkText border border-gray-200 px-8 py-3 rounded-full font-semibold text-base shadow-sm hover:bg-gray-50 transition-all duration-300"
+        >
+          Hayır
+        </button>
+      </div>
+    </div>
+
+    <div
+      id="success-container"
+      class="hidden absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center z-10"
+    >
+      <h1
+        class="font-semibold text-7xl text-white drop-shadow-md z-20 text-center animate-popIn"
+      >
+        Bunca çiçek arasında, yine sen. <br />
+        <div class="flex justify-center mt-4">
+          <img class="w-20 h-20 rounded-full" src="img.jpg" alt="" />
+        </div>
+      </h1>
+      <div
+        id="garden"
+        class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0"
+      ></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
